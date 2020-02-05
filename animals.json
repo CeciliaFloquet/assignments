@@ -1,0 +1,24 @@
+{"animals":
+  [
+    {
+      "name":"bee",
+      "description":"flying, striped bug",
+      "numberOfLegs":6
+    },
+    {
+      "name":"whale",
+      "description":"enormous swimming creature",
+      "numberOfLegs":0
+    },
+    {
+      "name":"dog",
+      "description":"silly, hilarious friend",
+      "numberOfLegs":4
+    },
+    {
+      "name":"chicken",
+      "description":"can't fly",
+      "numberOfLegs":2
+    }
+  ]
+}

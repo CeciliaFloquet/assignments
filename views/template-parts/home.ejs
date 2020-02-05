@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+ 
+   <p>Welcome to the CPSC 2600 Template assignment!</p>
+   
+    <h2>Featured Animals:</h2>
+    
+    <div class="animal-item">
+      <dt> <%- animals[Math.floor(Math.random() * animals.length)].name %> </dt>
+      <dd>
+        <div class="stats">
+          <span>Number of legs:  </span>
+          <%- animals[Math.floor(Math.random() * animals.length)].numberOfLegs %>
+        </div>
+
+        <p class="description">
+         <%- animals[Math.floor(Math.random() * animals.length)].description %>
+        </p>
+      </dd>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  max-width: 1000px;
+  margin:auto;
+}
+
+.site-title {
+
+  font-size: 4rem;
+
+  text-transform: capitalize;
+}
+
+.animals-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem 1rem;
+
+  background-color: mistyrose;
+  padding:1rem;
+}
+
+.animal-item {
+  background-color: slateblue;
+  color:white;
+  padding:1rem;
+}
+
+.animal-item dt {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}

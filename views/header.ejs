@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Assignment 3 Templates: <%- title %></h1>
+    <div class="subtitle">
+        Our First Experiment With Templates
+    </div>
+      <nav>
+          <ul>
+            <% pages.forEach(pages=>{ %>
+          
+              <li><a href="<%= pages %>"> <%= pages %></a></li>
+          
+            <% }); %>
+              
+          </ul>
+      </nav>
+      <h1><p> <%- title %> </p></h1>
+    </header>
+</body>
+</html>

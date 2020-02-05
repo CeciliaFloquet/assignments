@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <dl class="animals-container">
+     <% animals.forEach(animals=>{ %>
+        <div class="animal-item">
+          <dt> <%- animals.name %> </dt>
+          <dd>
+            <div class="stats">
+              <span>Number of legs:  </span>
+              <%- animals.numberOfLegs %>
+            </div>
+            <p class="description">
+             <%- animals.description %>
+            </p>
+          </dd>
+        </div>
+    <% }); %>
+    </dl>
+</body>
+</html>
