@@ -9,19 +9,31 @@ app.set('view engine','ejs');
 
 app.get('/:page', (req,res, next)=>{
     type =req.params.page;
-    
-    res.render('index',{
+    if (pages.includes(type)){
+        res.render('index',{
+            title: type,
+            pages:pages,
+            type:type,
+            animals:animals
+            
+        },(error, html) => {
+            if(error){
+                error.status =500;
+                next(error);
+               
+            }else{
+                 res.send(html);
+            }
+             
+        });
         
-        title: type,
-        pages:pages,
-        type:type,
-        animals:animals
-        
-    });
+    }else{
+        next('route')
+    }
    
 });
 
-app.get('/', (req,res)=>{
+app.get('/', (req,res,)=>{
    
     res.redirect(301, '/home');
    
@@ -49,19 +61,16 @@ app.get('*', (req,res,next)=>{
 // This middleware is meant to handle any type off error. We'll use it for 404 and 500 errors. 
 app.use((error, req, res, next)=>{ 
     //Error handler function.  Render an error page with the status code and status message of the caught error.  //Remember to set the status code of the response before sending.
-    if(error.status != '404'){
-        error.status=500;
-    }
+    // if(error.status != '404'){
+    //     error.status=500;
+    // }
     res.render('template-parts/errors', {
        status: error.status,
        message: error.message
          
-    } , (error, html) => {
-         res.send(html);
-    });
+    } );
    
 }); 
-
 
 //server port 8080
 app.set('port', process.env.PORT || 8080)
