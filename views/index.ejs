@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body style="color: <%-color%>">
+    <h1>Express Middleware and Validators</h1>
+    <form action="/heroes" method="post">
+        <label>
+            Enter name of new super hero:
+            <input type="text" name="name"/>
+        </label>
+         <label>
+            Enter email their email address:
+            <input type="text" name="email"/>
+        </label>
+        <fieldset>
+            <legend>Choose at least two special powers:</legend>
+            <label>
+                Flying: 
+                <input type="checkbox" name="powers" value="flying"><br>
+            </lavel>
+            <label>
+                 Laser Eyes: 
+                 <input type="checkbox" name="powers" value="laser eyes">
+            </label>
+            <label>
+                Invisibility: 
+                <input type="checkbox" name="powers" value="Invisibility">
+            </label>
+            <label>
+                Psychic: 
+                <input type="checkbox" name="powers" value="Psychic">
+            </label>
+            <label>
+                Time travel: 
+                <input type="checkbox" name="powers" value="time travel">
+            </label>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+    <form action="/" method="get">
+        <label>
+            Change page color:
+            <input type="color" name="color" value="<%-color%>">
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
