@@ -46,14 +46,12 @@ app.post('/bands',(req,res)=>{
     
 });
 app.post('/albums',(req,res)=>{
-console.log(req.body.band);
     Band.findOne({"name":req.body.band})
     .exec((error,results)=>{
         if(error){
             res.status(500).send(error);
         }
         else{
-            console.log("1. " + results);
             if(results ==null){
                 res.status(404).send("No Band with that name found");
             }

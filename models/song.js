@@ -8,3 +8,4 @@ let songSchema = new Schema({
 });
 //convert schema into model.
 module.exports.Song=mongoose.model('Song', songSchema);
+exports.songSchema=songSchema;
