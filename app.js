@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+let mongoose= require('mongoose');
 
 const db = require('./database/db.js');
 const {Album}=require('./models/album.js');
@@ -164,9 +165,9 @@ db.once('open', ()=>{
 });
 
 
-db.once('SIGINT', ()=>{
-    app.connection.close(()=>{
+process.on('SIGINT', ()=>{
+    mongoose.connection.close(()=>{
         console.log('Mongoose disconnected through app termination');
-        db.exit(0);
+        process.exit(0);
     });
 });
