@@ -31,7 +31,7 @@ const randomFunc=()=>{
         .then(results=>{    
             
             let container = document.getElementById('featured-film');  
-            container.innerHTML = "oi"; 
+            container.innerHTML = ""; 
             let t =new Array();
             
             results.data.forEach(Film=>{
@@ -45,7 +45,7 @@ const randomFunc=()=>{
         })     
         .catch(error=>{console.log(error)});
  }; 
- 
+  setInterval(refreshAllFilms, 3000);
 const refreshFeaturedFilm = ()=>{ 
     randomFunc();
     setInterval(randomFunc, 3000);

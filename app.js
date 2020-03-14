@@ -30,10 +30,8 @@ app.post('/api/films', (req,res)=>{
 
 app.get('/api/films', (req,res)=>{
     // TODO
-    //console.log(Film);
     Film.find()
     .exec((error,results)=>{
-        //console.log(results);
         if(error){
             res.status(500).send(error);
         }
@@ -42,7 +40,6 @@ app.get('/api/films', (req,res)=>{
                 res.status(200).send("No film found");
             }
             else{
-                //console.log(results);
                 res.status(200).send(results);
             }
         }
