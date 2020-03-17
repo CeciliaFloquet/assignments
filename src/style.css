@@ -1,0 +1,36 @@
+header{
+    background-color: lightblue;
+    color:red;
+    padding:1rem;
+}
+
+
+html {
+    font-family: sans-serif;
+    background-color: CornflowerBlue;
+}
+
+body {
+    max-width:1000px; 
+    margin:auto;
+}
+
+.breed-list {
+    
+    list-style-type: none;
+    
+    padding:0;
+    
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+    grid-gap:1rem;
+}
+
+img {
+    width:100%;
+    height:auto;
+    max-height:450px;
+    object-fit: cover;
+}
