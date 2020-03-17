@@ -10235,8 +10235,6 @@ var DogList = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      // This code will be run immediately after the component is created.      
-      // Use Axios to load data from Dog API  
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://dog.ceo/api/breeds/list/all').then(function (results) {
         _this2.setState({
           dogBreeds: Object.keys(results.data.message)
@@ -10252,7 +10250,7 @@ var DogList = /*#__PURE__*/function (_React$Component) {
         className: "breed-list"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DogBreed_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
         dogBreed: this.state.dogBreeds
-      }))); //<ul className="breed-list">{this.state.dogBreeds.map(db=><li key={db}>{db}</li>)}</ul>; 
+      })));
     }
   }]);
 

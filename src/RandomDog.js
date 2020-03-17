@@ -17,21 +17,14 @@ class RandomDog extends React.Component {
             this.setState({           
                     dogImg: results.data.message
                 });
-        
-        
         })
         .catch(error=>{console.log(error)});
-       
     } 
-    
-    
     
     render() {     
         return <>
                 <img src={this.state.dogImg} alt="Logo"/>
                 </>;
     } 
-    
 } 
- 
 export default RandomDog; 

@@ -24,7 +24,5 @@ class DogBreed extends React.Component {
                     </li>
               </>
     }
-    
-        
 }
 export default DogBreed ;
