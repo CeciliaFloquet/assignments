@@ -20,9 +20,11 @@ class DogBreed extends React.Component {
         };
        
         return <>
-                    <li >{this.props.dogBreed.map(db=><h2 style={styleOject}key={db}>{db}</h2>)}
-                    </li>
+                    {this.props.dogBreed.map(db=><li style={styleOject} key={db}>{db}</li>)}
+                    
               </>
     }
+    
+        
 }
 export default DogBreed ;

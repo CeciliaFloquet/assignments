@@ -10163,12 +10163,12 @@ var DogBreed = /*#__PURE__*/function (_React$Component) {
         margin: "10px",
         backgroundColor: "lightblue"
       };
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, this.props.dogBreed.map(function (db) {
-        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, this.props.dogBreed.map(function (db) {
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
           style: styleOject,
           key: db
         }, db);
-      })));
+      }));
     }
   }]);
 
@@ -10250,7 +10250,7 @@ var DogList = /*#__PURE__*/function (_React$Component) {
         className: "breed-list"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DogBreed_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
         dogBreed: this.state.dogBreeds
-      })));
+      })), ";");
     }
   }]);
 
