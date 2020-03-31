@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A9</title>
+</head>
+<body>
+    
+    <form action="/api/animals" method="POST">
+        <label>
+            Enter name of animal:
+            <input type="text" name="name">
+        </label>
+        <input type="submit" value="Submit"/>
+    </form>
+    
+    <form action="/api/plants" method="POST">
+        <label>
+            Enter name of plant:
+            <input type="text" name="name">
+        </label>
+        <input type="submit" value="Submit"/>
+    </form>
+    
+    <h2>GET routes:</h2>
+    
+    <p>Get all <a href='/api/animals'>animals</a> </p>
+    
+    <p>Get all <a href='/api/plants'>plants</a> </p>
+    
+</body>
+</html>
